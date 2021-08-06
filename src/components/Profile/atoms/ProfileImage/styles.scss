@@ -1,0 +1,12 @@
+.image-container {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  img {
+    visibility: hidden;
+  }
+}

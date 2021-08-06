@@ -1,0 +1,15 @@
+.profile-status-container {
+  position: absolute;
+  left: 220px;
+  bottom: 30px;
+  background: dodgerblue;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border-radius: 50%;
+
+  p {
+    width: max-content;
+    display: none;
+  }
+}

@@ -1,2 +1,3 @@
 # github-profile
-Created with CodeSandbox
+
+A try to use Atomic Design Pattern to create the profile from Github.
