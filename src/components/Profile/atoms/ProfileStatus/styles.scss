@@ -2,14 +2,37 @@
   position: absolute;
   left: 220px;
   bottom: 30px;
-  background: dodgerblue;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  border-radius: 50%;
+  background: #0d1117;
+  color: snow;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.2s ease-in;
+  border: 1px solid #30363d;
 
-  p {
+  .profile-status-icon {
+    align-self: center;
+  }
+
+  .profile-status-text {
     width: max-content;
     display: none;
+  }
+
+  &:hover {
+    width: max-content;
+
+    .profile-status-icon {
+      margin-right: 10px;
+    }
+
+    .profile-status-text {      
+      display: flex;
+    }
   }
 }

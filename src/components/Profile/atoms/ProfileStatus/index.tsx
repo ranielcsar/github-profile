@@ -8,8 +8,8 @@ type Props = {
 function ProfileStatus({ icon, status }: Props) {
   return (
     <div className="profile-status-container">
-      <figure style={{ backgroundImage: `url(${icon})` }}></figure>
-      <p>{status}</p>
+      <p className="profile-status-icon">{icon}</p>
+      <p className="profile-status-text">{status}</p>
     </div>
   )
 }
