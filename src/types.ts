@@ -10,6 +10,7 @@ export type ProfileProps = {
   username: string
   bio: string
   status: string
+  statusIcon: string
   followers: number
   following: number
   stars: number

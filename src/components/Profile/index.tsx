@@ -1,27 +1,54 @@
 import { ProfileProps } from '../../types'
-import ProfileImage from './atoms/ProfileImage'
-import ProfileStatus from './atoms/ProfileStatus'
-import ProfileName from './atoms/ProfileName'
-import ProfileUsername from './atoms/ProfileUsername'
-import ProfileBio from './atoms/ProfileBio'
+import ProfileImageStatus from './molecules/ProfileImageStatus'
+import ProfileUserInfo from './molecules/ProfileUserInfo'
+import ProfilePersonalInfos from './molecules/ProfilePersonalInfos'
 import EditProfileButton from './atoms/EditProfileButton'
+import ProfileFollowersFollowingStars from './atoms/ProfileFollowersFollowingStars'
+
+import './styles.scss'
 
 type Props = {
-  data?: ProfileProps
+  data: ProfileProps
 }
 
 function Profile({ data }: Props) {
+  const {
+    profileImage,
+    status,
+    statusIcon,
+    name,
+    username,
+    bio,
+    followers,
+    following,
+    stars,
+    location,
+    email,
+    website,
+    twitter
+  } = data
+
   return (
     <section className="profile">
-      <ProfileImage image={'https://avatars.githubusercontent.com/u/20558676?v=4'} name="Raniel">
-        <ProfileStatus icon={'🚀'} status={'muita nave pra pouco universo'} />
-      </ProfileImage>
+      <ProfileImageStatus
+        image={profileImage}
+        statusIcon={statusIcon}
+        status={status}
+        name={name}
+      />
 
-      <ProfileName name="Raniel" />
-      <ProfileUsername username="ranielcsar" />
-      <ProfileBio bio="music // code" />
+      <ProfileUserInfo name={name} username={username} bio={bio} />
 
       <EditProfileButton title={'Edit profile'} />
+
+      <ProfileFollowersFollowingStars followers={followers} following={following} stars={stars} />
+
+      <ProfilePersonalInfos
+        location={location}
+        email={email}
+        linkedin={website}
+        twitter={twitter}
+      />
     </section>
   )
 }

@@ -1,0 +1,17 @@
+.profile-personal-info {
+  display: flex;
+  align-items: flex-start;
+
+  .icon {
+    margin-right: 10px;
+    color: gray;
+    height: 0;
+    font-size: 20px;
+  }
+
+  a {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
